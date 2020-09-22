@@ -1,11 +1,8 @@
 package com.example.prince_tvs;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,18 +19,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.prince_tvs.Database.databaseHandler;
 import com.example.prince_tvs.Model.CustomerModel;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.EventListener;
-import java.util.List;
 
 public class CustomerRegisterActivity extends AppCompatActivity {
 
@@ -54,7 +44,6 @@ public class CustomerRegisterActivity extends AppCompatActivity {
     private Toolbar toolbar;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Log.d("Debugging","menu created");
         getMenuInflater().inflate(R.menu.mymenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -65,7 +54,6 @@ public class CustomerRegisterActivity extends AppCompatActivity {
             case R.id.menu_blockTime:
                 Intent intent = new Intent(CustomerRegisterActivity.this, BlockTimeActivity.class);
                 startActivity(intent);
-
                 return true;
 
             default:
@@ -79,7 +67,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
 
-        //For initialization of layout items
+        // For initialization of layout items
         initialization();
 
 
@@ -108,15 +96,14 @@ public class CustomerRegisterActivity extends AppCompatActivity {
             databaseHandler.updateCustomerCount(getDate, freeS, paidS, runningS);
         }
 
-        //Service value update
+        // Service value update
         paidS.setText("0" + " / " + String.valueOf(PaidService));
         freeS.setText("0" + " / " + String.valueOf(FreeService));
         runningS.setText("0" + " / " + String.valueOf(RunningService));
 
         customerDateLayout.setOnClickListener(onClickCalendarActivity());
 
-        //to be called on pressing done button;
-
+        // To be called on pressing done button;
         registerCustomerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,12 +129,6 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void updateServiceValues(Context context, String getDate) {
-        if(databaseHandler != null) {
-            databaseHandler.updateCustomerCount(getDate, freeS, paidS, runningS);
-        }
-    }
-
     private void dateTextSetter(String date) {
         String[] parse = date.split(",");
         dateDay.setText(parse[0]);
@@ -156,7 +137,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         dateNo.setText(strDate[1]);
     }
 
-    //Function for validating Items
+    // Function for validating Items
     private boolean validateDetails() {
 
         return true;
@@ -219,7 +200,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        //### Initializing and setting adapter for dropdown for service type
+        // Initializing and setting adapter for dropdown for service type
         customerServiceTypeAdapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.service_type_drop_down,
@@ -227,7 +208,7 @@ public class CustomerRegisterActivity extends AppCompatActivity {
         customerServiceTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         customerServiceType.setAdapter(customerServiceTypeAdapter);
 
-        //### Initialize Date
+        // Initialize Date
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEE, MMM/dd/yyyy");
         Date dateObject = Calendar.getInstance().getTime();
         getDate = simpleDateFormat.format(dateObject);

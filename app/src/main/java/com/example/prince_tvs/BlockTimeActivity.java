@@ -3,20 +3,15 @@ package com.example.prince_tvs;
 import android.app.DatePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import com.example.prince_tvs.Database.databaseHandler;
 import com.example.prince_tvs.Model.blockTime;
-import com.example.prince_tvs.R;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -50,7 +45,6 @@ public class BlockTimeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(verify_blockValues()) {
-
                     blockTime blockTime = new blockTime();
                     blockTime.setFreeService(Integer.valueOf(blockFreeService.getText().toString()));
                     blockTime.setPaidService(Integer.valueOf(blockPaidService.getText().toString()));
@@ -60,7 +54,6 @@ public class BlockTimeActivity extends AppCompatActivity {
                     if(databaseHandler != null) {
                         databaseHandler.writeBlockTime(blockTime);
                     }
-
                 }
                 else {
                     Toast.makeText(getApplicationContext(),"Invalid Value",Toast.LENGTH_SHORT).show();
@@ -68,6 +61,12 @@ public class BlockTimeActivity extends AppCompatActivity {
             }
         });
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private View.OnClickListener datePicker() {

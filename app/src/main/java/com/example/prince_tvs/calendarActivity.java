@@ -8,13 +8,10 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import com.example.prince_tvs.Database.databaseHandler;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -97,7 +94,6 @@ public class calendarActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -106,6 +102,7 @@ public class calendarActivity extends AppCompatActivity {
         setResult(RESULT_OK, intent);
         finish();
     }
+
     private void initialization() {
         toolbar = findViewById(R.id.Toolbar);
         toolbar.setTitle("Calendar");
