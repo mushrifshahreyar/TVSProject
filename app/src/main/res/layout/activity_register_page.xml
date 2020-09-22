@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+     android:layout_width="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerRegisterActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customerNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#000000"
+        >
+        <EditText
+            android:id="@+id/customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:hint="Name"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:drawablePadding="20sp"
+            android:inputType="text"
+            android:textSize="18sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customerMobileNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#000000"
+        >
+        <EditText
+            android:id="@+id/customerMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:drawablePadding="20sp"
+            android:inputType="phone"
+            android:textSize="18sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customerVehicleNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#000000"
+        >
+        <EditText
+            android:id="@+id/customerVehicleNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:hint="Vehicle Number"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:drawablePadding="20sp"
+            android:inputType="text"
+            android:textSize="18sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/customerServiceType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="multiply"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="5dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date : "
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="40dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/customerDateLayout"
+            android:background="?android:selectableItemBackground">
+            <TextView
+                android:id="@+id/customerDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/customerDateMonthYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JUNE 2020"
+                    android:textSize="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/customerDateDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free Service"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/freeService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 0"
+            android:layout_marginLeft="37dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid Service"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/paidService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 0"
+            android:layout_marginLeft="37dp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Running Service"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/runningService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 0"
+            android:layout_marginLeft="15sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/customerDoneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="50dp"
+
+        android:text="Done"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:background="@drawable/done_button"/>
+</LinearLayout>
+</ScrollView>

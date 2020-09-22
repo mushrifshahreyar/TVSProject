@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Prince TVS</string>
+    <string-array name="service_type_drop_down">
+        <item>Free Service</item>
+        <item>Paid Service</item>
+        <item>Running Service</item>
+    </string-array>
+</resources>

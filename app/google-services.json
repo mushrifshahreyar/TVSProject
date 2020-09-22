@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "681586836398",
+    "firebase_url": "https://princetvs-b0c10.firebaseio.com",
+    "project_id": "princetvs-b0c10",
+    "storage_bucket": "princetvs-b0c10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681586836398:android:948167e05b1c6510557e3f",
+        "android_client_info": {
+          "package_name": "com.example.prince_tvs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681586836398-o189g73dfsc1tqg63hgac9t0cd447j5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiXZPsmaOtRwee4n-_Nd5gri5Go5yrvDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681586836398-o189g73dfsc1tqg63hgac9t0cd447j5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
