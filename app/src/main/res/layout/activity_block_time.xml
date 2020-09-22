@@ -14,30 +14,6 @@
     <include layout="@layout/toolbar"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/blockPaidServiceLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#000000"
-        >
-        <EditText
-            android:id="@+id/blockPaidService"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10sp"
-            android:ems="10"
-            android:hint="Paid Service"
-            android:textColorHint="#000000"
-            android:textColor="#000000"
-            android:drawablePadding="20sp"
-            android:inputType="number"
-            android:textSize="18sp"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/blockFreeServiceLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,6 +29,30 @@
             android:layout_marginTop="10sp"
             android:ems="10"
             android:hint="Free Service"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
+            android:drawablePadding="20sp"
+            android:inputType="number"
+            android:textSize="18sp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/blockPaidServiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#000000"
+        >
+        <EditText
+            android:id="@+id/blockPaidService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:ems="10"
+            android:hint="Paid Service"
             android:textColorHint="#000000"
             android:textColor="#000000"
             android:drawablePadding="20sp"
@@ -124,5 +124,5 @@
         android:padding="15dp"
         android:background="@drawable/done_button"/>
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

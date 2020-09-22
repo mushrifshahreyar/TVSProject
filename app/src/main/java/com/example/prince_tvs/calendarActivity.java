@@ -23,7 +23,6 @@ public class calendarActivity extends AppCompatActivity {
     private TextView paidService;
     private TextView freeService;
     private TextView runningService;
-    private ProgressBar progressBar;
     private Date date;
     private String strDate;
     private Button button;
@@ -72,8 +71,6 @@ public class calendarActivity extends AppCompatActivity {
             }
         });
 
-        progressBar.setVisibility(View.INVISIBLE);
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +110,6 @@ public class calendarActivity extends AppCompatActivity {
         paidService = findViewById(R.id.calendarPaidService);
         freeService = findViewById(R.id.calendarFreeService);
         runningService = findViewById(R.id.calendarRunningService);
-        progressBar = findViewById(R.id.ProgressBar);
         button = findViewById(R.id.calendarDoneButton);
     }
 }
